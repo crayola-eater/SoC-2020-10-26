@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+      }
+      .navigation {
+        height: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .navigation a {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .container {
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .blue {
+        color: blue;
+      }
+      .red {
+        color: red;
+      }
+      .yellow {
+        color: yellow;
+      }
+      .green {
+        color: green;
+      }
+      .logo {
+        text-align: center;
+      }
+      .logo-letter {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <title>Google</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="#">About</a>
+      <a href="#">Store</a>
+    </nav>
+    <main class="container">
+      <p class="logo">
+        <span class="logo-letter blue">G</span>
+        <span class="logo-letter red">o</span>
+        <span class="logo-letter yellow">o</span>
+        <span class="logo-letter blue">g</span>
+        <span class="logo-letter green">l</span>
+        <span class="logo-letter red">e</span>
+      </p>
+      <input type="text" id="search-input" />
+      <div class="buttons-container">
+        <button id="search-button">Google Search</button>
+        <button>I'm Feeling Lucky</button>
+      </div>
+    </main>
+    <script>
+      document.querySelector("#search-button").addEventListener("click", () => {
+        const input = document.querySelector("#search-input");
+        const value = input.value.trim();
+        if (value.length > 0) {
+          alert(
+            `You searched for ${value}, but I don't know what to do with this.`
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
